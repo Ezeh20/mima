@@ -3,24 +3,34 @@
     font-family: 'Open Sans', sans-serif;
     width: 210px;
     min-height: 100vh;
-    padding: 32px;
+    padding: 43px 32px 32px;
     display: flex;
     flex-direction: column;
     gap: 8rem;
+    z-index: 5;
 
     @media screen and (max-width:768px) {
         position: fixed;
         left: -100%;
-        width: 210px;
+        width: 220px;
         min-height: 100vh;
+        transition: all 500ms linear;
     }
 
     .toggle {
         position: fixed;
-        left: 0;
-        top: 5rem;
-        font-size: 1.2rem;
-        opacity: .5;
+        right: 24px;
+        top: .8rem;
+        font-size: 3.3rem;
+        // background: #000;
+        padding: 1rem;
+
+        @media screen and (max-width:450px) {
+            left: 0;
+            top: 2.5rem;
+            padding: 0;
+            font-size: 1.2rem;
+        }
 
         @media screen and (min-width:769px) {
             display: none;
@@ -36,7 +46,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1.2rem;
+        gap: 1.7rem;
 
         .logo {
             font-weight: 700;
@@ -143,7 +153,7 @@
     .logout {
         display: flex;
         align-items: center;
-        margin-top: 2rem;
+        margin-top: 5rem;
         gap: .8rem;
 
         &:hover {

@@ -1,0 +1,100 @@
+.header {
+    background-color: var(--primary-color);
+    padding: 24px;
+    width: 100%;
+    border-radius: 20px;
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width:875px) {
+            flex-direction: column-reverse;
+            align-items: initial;
+            gap: 2rem;
+        }
+
+        .searchContainer {
+            display: flex;
+            align-items: center;
+            gap: .1rem;
+            color: var(--text-color-alt);
+            border: 1px solid #dedede;
+            padding: .4rem .8rem;
+            border-radius: 10px;
+
+            .searchIcon {
+                font-size: 1.5rem;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .searchInput {
+                outline: none;
+                background-color: transparent;
+                padding: .5rem;
+                border: none;
+                font-size: 15px;
+                color: var(--text-color-alt);
+            }
+
+            .searchInput::placeholder {
+                color: var(--text-color-alt);
+                opacity: .8;
+            }
+        }
+
+        .currentDay {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+
+            @media screen and (max-width:450px) {
+                display: none;
+            }
+
+            .date {
+                font-weight: 600;
+                font-size: 17px;
+            }
+
+            .settingsContainer {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-items: center;
+
+                .settings {
+                    border: 1px solid #dedede;
+                    display: flex;
+                    align-items: center;
+                    padding: 5px;
+                    border-radius: 10px;
+
+                    .iconSetting {
+                        font-size: 1.1rem;
+                    }
+                }
+
+                .notifi {
+                    position: absolute;
+                    left: -28px;
+                    top: -7px;
+                    font-size: 12px;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #ff515a;
+                    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+}
