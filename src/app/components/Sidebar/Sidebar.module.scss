@@ -1,5 +1,6 @@
 .sidebar {
     background-color: var(--primary-color);
+    font-family: 'Open Sans', sans-serif;
     width: 210px;
     min-height: 100vh;
     padding: 32px;
@@ -104,9 +105,10 @@
             gap: .8rem;
             position: relative;
 
-            &:hover{
+            &:hover {
                 cursor: pointer;
             }
+
             .icon {
                 font-size: 1.1rem;
                 color: var(--icon-color);
@@ -129,6 +131,7 @@
         }
 
         .singleAlt {
+
             .text,
             .icon {
                 color: #848484;
@@ -136,11 +139,14 @@
             }
         }
     }
-    .logout{
+
+    .logout {
         display: flex;
         align-items: center;
+        margin-top: 2rem;
         gap: .8rem;
-        &:hover{
+
+        &:hover {
             cursor: pointer;
         }
     }
