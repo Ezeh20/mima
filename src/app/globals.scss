@@ -1,0 +1,38 @@
+:root {
+    --bg-color: #f9f9f9;
+    --primary-color: #ffffff;
+    --secondary-color: #282d4b;
+    --secondary-color-dark: #2d3253;
+    --text-color: #636685;
+    --text-color-alt: #6a6a6a;
+    --light-text: #888888;
+    --header-color: #303555;
+    --card-title: #373e4b;
+    --button-color: #4a4e73;
+    --icon-color: #363853;
+}
+
+* {
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--bg-color);
+    color: var(--text-color-alt);
+}
+
+.layout {
+    display: flex;
+    gap: 24px;
+}

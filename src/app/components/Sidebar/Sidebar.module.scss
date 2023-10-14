@@ -1,0 +1,154 @@
+.sidebar {
+    background-color: var(--primary-color);
+    width: 210px;
+    min-height: 100vh;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+
+    @media screen and (max-width:768px) {
+        position: fixed;
+        left: -100%;
+        width: 210px;
+        min-height: 100vh;
+    }
+
+    .toggle {
+        position: fixed;
+        left: 0;
+        top: 5rem;
+        font-size: 1.2rem;
+        opacity: .5;
+
+        @media screen and (min-width:769px) {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+
+        .logo {
+            font-weight: 700;
+            color: var(--secondary-color-dark);
+            font-size: 20px;
+
+            .span {
+                color: var(--text-color-alt);
+            }
+        }
+
+        .userContainer {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid var(--text-color-alt);
+            padding: 4.5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .user {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            .editContainer {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 5px;
+                border-radius: 50%;
+                background-color: var(--secondary-color);
+                bottom: -10px;
+
+                .edit {
+                    color: var(--primary-color);
+                    font-size: 1rem;
+                    opacity: .8;
+                }
+            }
+        }
+
+        .name {
+            margin-top: 12px;
+            font-size: 17.5px;
+            font-weight: 500;
+            opacity: .8;
+        }
+    }
+
+    .tabs {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .single {
+            @extend .tabs;
+            flex-direction: row;
+            align-items: center;
+            gap: .8rem;
+            position: relative;
+
+            &:hover{
+                cursor: pointer;
+            }
+            .icon {
+                font-size: 1.1rem;
+                color: var(--icon-color);
+            }
+
+            .text {
+                color: #6e718e;
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+            .active {
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: var(--icon-color);
+                left: -10px;
+            }
+        }
+
+        .singleAlt {
+            .text,
+            .icon {
+                color: #848484;
+                font-weight: 500;
+            }
+        }
+    }
+    .logout{
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.sidebarActive {
+    @media screen and (max-width:768px) {
+        position: fixed;
+        left: 0;
+    }
+}
