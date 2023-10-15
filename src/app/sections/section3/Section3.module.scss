@@ -1,0 +1,76 @@
+.section3 {
+    margin-inline: 1.5rem;
+    margin-block: 1rem;
+
+    @media screen and (min-width:1000px) {
+        margin-inline: auto;
+    }
+
+    .cardContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .card {
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            padding: .5rem;
+            border-radius: 20px;
+
+            .img {
+                width: 100%;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 1.5rem;
+                margin-inline: 10px;
+
+                .title {
+                    font-size: 16px;
+                    color: #494c52;
+                    font-weight: 600;
+                }
+
+                .location {
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    gap: 5px;
+                    opacity: .7;
+
+
+                }
+
+                .pii {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .price {
+                        .pri {
+                            font-size: 16px;
+                            color: #494c52;
+                            font-weight: 600;
+
+                            .span {
+                                color: #d4d7dd;
+                            }
+                        }
+                    }
+
+                    .icnCon {
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
