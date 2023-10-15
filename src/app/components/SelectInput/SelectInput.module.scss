@@ -1,0 +1,68 @@
+.select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    .input {
+        width: 100%;
+        padding: 1rem .5rem;
+        outline: none;
+        border: none;
+        color: var(--light-text);
+        font-size: 16px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .input::placeholder {
+        font-size: 14px;
+        color: var(--light-text);
+
+        @media screen and (max-width:600px) {
+            font-size: 12px;
+        }
+    }
+
+    .dropDown {
+        font-size: 2rem;
+    }
+
+    .options {
+        position: absolute;
+        bottom: -8rem;
+        background: var(--secondary-color-dark);
+        color: var(--primary-color);
+        width: 100%;
+        height: 120px;
+        overflow: scroll;
+        overflow-x: hidden;
+        border-radius: 10px;
+        z-index: 1;
+
+        .option {
+            padding: .5rem 1rem;
+            font-weight: 300;
+
+            &:hover {
+                cursor: pointer;
+                background: var(--primary-color);
+                color: var(--secondary-color);
+            }
+        }
+    }
+
+    .options::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .options::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+    }
+}

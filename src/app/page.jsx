@@ -1,10 +1,11 @@
 import styles from './page.module.scss'
+import Section1 from './sections/section1'
 
 const Home = () => {
- 
+
   return (
     <main className={styles.home}>
-      <p>home</p>
+      <Section1 />
     </main>
   )
 }

@@ -1,0 +1,8 @@
+.content {
+    max-width: 1440px;
+    margin-inline: 1.5rem;
+
+    @media screen and (min-width: 1400px) {
+        margin-inline: auto;
+    }
+}
